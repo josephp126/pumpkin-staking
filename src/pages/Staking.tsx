@@ -16,6 +16,10 @@ const StakingLayout = styled.div`
   @media (min-width: 900px) {
     padding: 50px 3% !important;
   }
+  @media (max-width: 736px) {
+    background-attachment: fixed !important;
+    background-size: cover !important;
+  }
 `;
 
 const Redirect = styled.a`
