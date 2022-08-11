@@ -1,13 +1,471 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.background {
+  /* background-image: linear-gradient(to top right, var(--bgLeft), var(--bgRight)); */
+  /* height: 100%;
+  width: 100%; */
+}
+
+.heading {
+  color: var(--headingColor);
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 1px;
+  line-height: 16px;
+}
+
+.nav-item,
+.icon {
+  color: rgb(18, 34, 79);
+}
+
+.active,
+.active .icon {
+  color: rgb(79 70 229);
+}
+
+.sidebarContainer {
+  /* position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1; */
+  background-color: rgba(165, 120, 205, 0.9);
+}
+
+.container {
+  display: flex;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: 15px 20px;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+.cardHeading {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.cardLogo {
+  width: 30px;
+  margin-left: 12px;
+  height: 30px;
+}
+
+.cardBody {
+  width: 100%;
+}
+
+.btnCntr {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  font-size: 15px;
+  color: white;
+  background-color: rgb(60, 189, 248);
+  padding: 10px 30px;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+}
+
+.cardDataCntr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.dataHeading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 45%;
+}
+
+.data {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  width: 55%;
+  color: rgb(73, 72, 72);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.dai {
+  background-color: #f5ac39;
+}
+
+.dai:hover {
+  background-color: rgba(245, 172, 57, 0.7);
+}
+
+.dai:active {
+  background-color: rgba(245, 172, 57, 0.9);
+}
+
+.fantom {
+  background-color: rgb(60, 189, 248);
+}
+
+.claim {
+  background-color: #f5ac39;
+}
+
+.pumpkin {
+  background-color: rgb(247, 110, 133);
+}
+
+.tomb {
+  background-color: rgb(122, 93, 169);
+}
+
+.fantom:hover {
+  background-color: rgba(60, 189, 248, 0.7);
+}
+
+.pumpkin:hover {
+  background-color: rgba(247, 110, 133, 0.7);
+}
+
+.tomb:hover {
+  background-color: rgba(122, 93, 169, 0.7);
+}
+
+.fantom:active {
+  background-color: rgba(60, 189, 248, 0.9);
+}
+
+.pumpkin:active {
+  background-color: rgba(247, 110, 133, 0.9);
+}
+
+.tomb:active {
+  background-color: rgba(122, 93, 169, 0.9);
+}
+
+.registerNftCntr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.stakeNftCntr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.mainContainer {
+  overflow: auto;
+}
+
+.infoCard {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: 15px 20px;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+.infoCardHeading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  width: 30%;
+  border-bottom: 1px solid rgb(237, 237, 237);
+  display: flex;
+}
+
+.infoCardData {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.infoCardText {
+  width: 600px;
+  padding: 10px 0;
+}
+
+.actionAllBtnCntr {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+}
+
+.nftCardImg {
+  width: 280px;
+  height: 280px;
+  background-color: rgb(49, 199, 232);
+  border-radius: 1rem;
+}
+
+.nftCardHeader {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgb(223, 222, 222);
+}
+
+.stakeCardHeader {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgb(223, 222, 222);
+  display: flex;
+  justify-content: space-between;
+}
+
+.stakingCardImg {
+  width: 30px;
+  height: 30px;
+}
+
+.nftCardBody {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.dataItem {
+  width: 100%;
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.dataItemHeader {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dataItemVal {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(73, 72, 72);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nftCard {
+  margin-top: 0px;
+}
+
+.stakeNftCard {
+  margin-top: 0px;
+  /* margin-right: 20px; */
+}
+
+.claimRewardsCntr {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+}
+
+.claimRewardsData {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.claimRewardsHeader {
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.claimRewardsValue {
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(73, 72, 72);
+}
+
+.claimBtnCntr {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stakeInputCntr {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.stakeInput {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 50px;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
+
+input:focus {
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.stakeBtnCntr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebarContainer {
+  background-color: rgba(122, 93, 169, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: fixed;
+  left: 0px;
+  top: 66px;
+  display: none;
+}
+
+.sideBar {
+  width: 300px;
+  background-color: white;
+  height: 100%;
+  border-top: 1px solid rgb(217, 217, 217);
+  padding: 10px 0;
+}
+
+@media only screen and (max-width: 1900px) {
+  .cardContainer {
+    /* margin-left: 20px; */
+  }
+
+  .infoCard {
+    margin-left: 20px;
+    width: calc(100% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1560px) {
+  .nftCard {
+    margin-bottom: 20px;
+  }
+
+  .stakeNftCard {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebarContainer {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .cardContainer {
+    margin-left: 0px;
+  }
+
+  .infoCard {
+    margin-left: 0px;
+  }
+
+  .infoCardHeading {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .registerNftCntr {
+    padding: 0 10px;
+  }
+
+  .stakeNftCntr {
+    padding: 0 10px;
+  }
+
+  .infoCard {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .registerNftCntr {
+    justify-content: center;
+  }
+
+  .stakeNftCntr {
+    justify-content: center;
+  }
+
+  .infoCard {
+    width: 350px;
+  }
+
+  .stakeNftCard {
+    margin-right: 0px;
+  }
 }

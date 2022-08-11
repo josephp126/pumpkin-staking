@@ -7,6 +7,7 @@ import { TokenCard } from "../components/TokenCard";
 import { Sidebar } from "../components/Sidebar";
 import BackImage from "../assets/images/staking_back.png";
 import BackDarkImage from "../assets/images/staking_dark_back.png";
+import "../index.css";
 
 const StakingLayout = styled.div`
   background-attachment: fixed !important;
