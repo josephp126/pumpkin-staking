@@ -14,7 +14,7 @@ const StakingLayout = styled.div`
   background-size: cover !important;
   padding: 80px 3% !important;
   @media (min-width: 900px) {
-    padding: 50px 3%; !important
+    padding: 50px 3% !important;
   }
 `;
 
@@ -81,8 +81,8 @@ const Staking = () => {
       <StakingLayout
         style={{
           background: isDark
-            ? `url(${BackDarkImage}) no-repeat center center`
-            : `url(${BackImage}) no-repeat center center`,
+            ? `url(${BackDarkImage}) center center / cover no-repeat fixed`
+            : `url(${BackImage}) center center / cover no-repeat fixed`,
         }}
       >
         <HeaderBtn>
