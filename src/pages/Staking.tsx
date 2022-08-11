@@ -26,6 +26,9 @@ const StakingLayout = styled.div`
     -moz-background-attachment: fixed !important;
     -o-background-attachment: fixed;
   }
+  @media (pointer: coarse) {
+    background-attachment: fixed !important;
+  }
 `;
 
 const Redirect = styled.a`
