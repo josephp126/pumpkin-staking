@@ -19,6 +19,12 @@ const StakingLayout = styled.div`
   @media (max-width: 736px) {
     background-attachment: fixed !important;
     background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover;
+    -webkit-background-attachment: fixed !important;
+    -moz-background-attachment: fixed !important;
+    -o-background-attachment: fixed;
   }
 `;
 
@@ -85,8 +91,8 @@ const Staking = () => {
       <StakingLayout
         style={{
           background: isDark
-            ? `url(${BackDarkImage}) center center / cover no-repeat fixed`
-            : `url(${BackImage}) center center / cover no-repeat fixed`,
+            ? `url(${BackDarkImage}) no-repeat center center`
+            : `url(${BackImage}) no-repeat center center`,
         }}
       >
         <HeaderBtn>
